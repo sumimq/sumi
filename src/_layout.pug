@@ -67,6 +67,7 @@ html
             li: a(href="/fav") favorite
             // li: a(href="/thought") thought
             li: a(href="/work") work
+            li: a(href="/lang") language
             li: a(href="/misc") misc
 
           +div("submenu")
@@ -85,10 +86,9 @@ html
           br
           |⚠ この网站はGoogle Analyticsを使用します。この网站は携帶端末用ではありません。
 
-    main(class=verticalMain ? "vertical" : "")
-      article
-        +section(title, tags)
-          block main
+    main(class=vertical ? "vertical" : "")
+      +section(title, tags)
+        block main
 
-        //+section("")
-          include _discus.pug
+      //+section("")
+        include _discus.pug
